@@ -13,7 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-ALLOW_MISSING_DEPENDENCIES=tru
+ALLOW_MISSING_DEPENDENCIES=true
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+SELINUX_IGNORE_NEVERALLOWS=true
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
