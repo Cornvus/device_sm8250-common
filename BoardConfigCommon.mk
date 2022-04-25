@@ -126,6 +126,10 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 # Fingerprint
 TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oneplus:libudfps_extension.oneplus
 
+# HIDL
+#DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifests/manifest.xml
+#DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/manifests/compatibility_matrix.xml
+
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sm8250
 
