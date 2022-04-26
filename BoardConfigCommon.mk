@@ -15,7 +15,7 @@
 #
 ALLOW_MISSING_DEPENDENCIES=true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
-SELINUX_IGNORE_NEVERALLOWS=true
+#SELINUX_IGNORE_NEVERALLOWS=true
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 BUILD_BROKEN_DUP_RULES := true
@@ -125,11 +125,13 @@ TARGET_ENABLE_MEDIADRM_64 := true
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Fingerprint
-#TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oneplus:libudfps_extension.oneplus
+TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oneplus:libudfps_extension.oneplus
 
 # HIDL
-#DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifests/manifest.xml
-#DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/manifests/compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(COMMON_PATH)/device_framework_matrix.xml 
+DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sm8250
